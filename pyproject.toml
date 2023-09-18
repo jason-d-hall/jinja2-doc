@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "jinja2-doc"
+version = "0.0.1"
+description = "Parse documentation in markdown format from Jinja2 comments"
+readme = "README.rst"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+keywords = ['jinja2', 'utils', 'documentation']
+authors = [
+  {email = "jdhall75@zohomail.com"},
+  {name = "Jason D. Hall"}
+]
+maintainers = [
+  {name = "Jason D Hall", email = "jdhall75@zohomail.com"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+dependencies = [
+  "jinja2",
+  "python-frontmatter",
+  "markdown"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov[all]",
+  "black",
+  "flake8"
+]
+
+[project.urls]
+homepage = "https://github.com/jason-d-hall/jinja2-doc"
+repository = "https://github.com/jason-d-hall/jinja2-doc"
+
+[project.scripts]
+jinja-doc = "jinja2_doc:main_cli"
+

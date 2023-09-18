@@ -1,0 +1,25 @@
+[metadata]
+name = "jinja2-doc"
+version = attr: jinja2_doc.version
+author = Jason Hall
+author_email = jdhall75@zohomail.com
+url = "https://github.com/jason-d-hall/jinja2-doc"
+description = "Parse and generate documentation from Jinja2 comments"
+long_description = file: README.md
+long_description_content_type = text/markdown
+keywords: jinja2, utils
+license = BSD 3-Clause License
+classifiers =
+    License :: OSI Approved :: BSD License
+    Programming Language :: Python :: 3
+
+[options]
+packages = find:
+install_requires =
+    jinja2
+    python-frontmatter
+
+[options.extras_require]
+dev =
+    black
+    flake8
